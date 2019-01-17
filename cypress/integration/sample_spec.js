@@ -10,10 +10,12 @@
 //   })
 // })
 
-describe('My First Test', function () {
-  it('Checks out my Pool Table site', function () {
+describe('some init test', function () {
+  it('checks hellow world is there', function () {
     cy.visit('http://localhost:3000/')
     cy.contains('hello world')
   })
-
+  it('checks that some more is there', function () {
+    cy.contains('some more')
+  })
 })
