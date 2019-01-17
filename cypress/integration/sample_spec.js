@@ -11,11 +11,11 @@
 // })
 
 describe('some init test', function () {
-  it('checks hellow world is there', function () {
+  it('checks hellow world h1 is there', function () {
     cy.visit('http://localhost:3000/')
-    cy.contains('hello world')
+    cy.get('h1').contains('hello world')
   })
-  it('checks that some more is there', function () {
-    cy.contains('some more')
+  it('checks that some more p is there', function () {
+    cy.get('p').contains('some more')
   })
 })
