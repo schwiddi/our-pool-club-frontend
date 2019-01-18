@@ -21,7 +21,7 @@
     "test": "react-scripts test",
     "eject": "react-scripts eject",
     "cypressopen": "cypress open",
-    "cypressrun": "cypress run",
+    "cypressrun": "cypress run --record --key 77abec83-ee87-44fc-b1be-387360f65b28",
     "eslint": "eslint ./",
     "testall": "npm run eslint &&  npm run cypressrun"
   },
