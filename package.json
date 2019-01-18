@@ -1,6 +1,8 @@
 {
-  "name": "our-pool-table",
+  "author": "schwiddi",
+  "name": "our-pool-club-frontend",
   "version": "0.1.0",
+  "description": "frontend to store games that had been played on your pool table",
   "private": true,
   "dependencies": {
     "@material-ui/core": "^3.9.0",
