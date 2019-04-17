@@ -3,18 +3,22 @@ import { createStore, applyMiddleware, compose } from 'redux';
 import thunkMiddleware from 'redux-thunk';
 import { createLogger } from 'redux-logger';
 
-import rootReducer from './reducers/index';
+import rootReducer from '../reducers';
 
-let enhancer = applyMiddleware(
-  thunkMiddleware,
-  createLogger(),
+const logMiddleware = createLogger();
+
+let enhancer = compose(
+  applyMiddleware(
+    thunkMiddleware,
+    logMiddleware,
+  ),
 );
 
 if (window.__REDUX_DEVTOOLS_EXTENSION__) {
   enhancer = compose(
     applyMiddleware(
       thunkMiddleware,
-      createLogger(),
+      logMiddleware,
     ),
     window.__REDUX_DEVTOOLS_EXTENSION__ && window.__REDUX_DEVTOOLS_EXTENSION__(),
   );

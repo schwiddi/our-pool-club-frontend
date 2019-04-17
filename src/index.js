@@ -2,17 +2,27 @@ import React from 'react';
 import ReactDOM from 'react-dom';
 import { Provider } from 'react-redux';
 
-import configureStore from './store/index';
 import * as serviceWorker from './serviceWorker';
-import App from './App';
+import configureStore from './store';
+import * as actions from './store/actions/actions';
 
-const store = configureStore({});
+import Layout from './containers/Layout';
+
+
+const store = configureStore();
 
 ReactDOM.render(
   <Provider store={store}>
-    <App />
+    <Layout />
   </Provider>,
   document.getElementById('root'),
 );
+
+store.dispatch(actions.initiateApp());
+store.dispatch(actions.initiateAppDone());
+store.dispatch(actions.initiateUser());
+store.dispatch(actions.initiateUserDone());
+
+console.log(store.getState());
 
 serviceWorker.unregister();

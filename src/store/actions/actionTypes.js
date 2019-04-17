@@ -1,2 +1,5 @@
-export const INIT_APP = 'INIT_APP';
-export const INIT_APP2 = 'INIT_APP2';
+export const INITIATE_APP = 'INITIATE_APP';
+export const INITIATE_APP_DONE = 'INITIATE_APP_DONE';
+
+export const INITIATE_USER = 'INITIATE_USER';
+export const INITIATE_USER_DONE = 'INITIATE_USER_DONE';
