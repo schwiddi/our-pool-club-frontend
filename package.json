@@ -59,7 +59,9 @@
     "start": "node scripts/start.js",
     "build": "node scripts/build.js",
     "test": "node scripts/test.js",
-    "lint": "./node_modules/.bin/eslint ./src"
+    "lint": "./node_modules/.bin/eslint ./src",
+    "pre-commit": "npm run lint",
+    "pre-push": "npm run lint"
   },
   "eslintConfig": {
     "extends": "react-app"
@@ -119,5 +121,11 @@
     "presets": [
       "react-app"
     ]
+  },
+  "husky": {
+    "hooks": {
+      "pre-push": "npm run pre-push",
+      "pre-commit": "npm run pre-commit"
+    }
   }
 }
