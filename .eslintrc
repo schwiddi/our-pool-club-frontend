@@ -9,7 +9,7 @@
     "plugin:jest/recommended"
   ],
   "rules": {
-    "react/prefer-stateless-function": "off",
+    "react/prefer-stateless-function": "warn",
     "react/jsx-filename-extension": [
       1,
       {
