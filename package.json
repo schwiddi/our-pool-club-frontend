@@ -1,5 +1,7 @@
 {
-  "name": "frontend",
+  "author": "schwiddi",
+  "name": "our-pool-club-frontend",
+  "description": "frontend to store games that had been played on your pool table",
   "version": "0.1.0",
   "private": true,
   "dependencies": {
