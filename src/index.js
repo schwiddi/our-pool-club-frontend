@@ -23,6 +23,4 @@ store.dispatch(actions.initiateAppDone());
 store.dispatch(actions.initiateUser());
 store.dispatch(actions.initiateUserDone());
 
-console.log(store.getState());
-
 serviceWorker.unregister();
